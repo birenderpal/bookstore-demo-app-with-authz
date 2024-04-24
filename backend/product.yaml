@@ -82,7 +82,7 @@ Globals:
     Timeout: 5
     Tracing: Active
     AutoPublishAlias: live
-    Runtime: python3.10
+    Runtime: python3.12
     MemorySize: 256
     Layers:
       - !Sub "arn:aws:lambda:${AWS::Region}:017000801446:layer:AWSLambdaPowertoolsPython:3"
@@ -110,9 +110,9 @@ Resources:
     Properties:
       ContentUri: ./utils/
       CompatibleRuntimes:
-        - python3.10
+        - python3.12
     Metadata:
-      BuildMethod: python3.10
+      BuildMethod: python3.12
 
   GetProductsLogGroup:
     Type: AWS::Logs::LogGroup
